@@ -47,7 +47,7 @@ TELL user stats
 -- end of logic
 */
 
-// The following variables are required to get the program happening.
+// The following variables are required  to get the program happening.
 // location1, location2, location3
 // guess -- this is the guess entered by the user
 // guesses = number of guesses made by the user
@@ -65,5 +65,13 @@ var isSunk = false;
 //whilst the ship has not sunken, get the user's guess
 while (isSunk == false) {
     guess = prompt("Ready, aim, fire! (enter a digit between 0-6):");
-    console.log(guess);
+        if (guess < 0  || guess >6) {
+            alert("Please enter a valid number");
+        }
+        else {
+            guesses += 1;
+        }
+
 }
+
+console.log(guesses);
